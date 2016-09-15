@@ -1,5 +1,5 @@
-FROM debian:jessie
-RUN apt-get update && apt-get -y install busybox-static adduser bzip2 xz-utils nano insserv kmod sudo debootstrap cpio isolinux syslinux xorriso
+FROM fedora:24
+RUN dnf -y update && dnf -y install busybox shadow-utils bzip2 xz nano insserv kmod sudo supermin cpio syslinux xorriso
 ADD hooks /root/hooks
 ADD buildboot /root/buildboot/
 ADD includes.binary /root/includes.binary/

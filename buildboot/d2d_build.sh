@@ -4,7 +4,7 @@ set -e
 echo "---> clean up the root directory"
 (
 	cd $BUILDDIR && mv boot/vmlinuz* ../vmlinuz
-	chroot $BUILDDIR apt-get clean
+	chroot $BUILDDIR dnf clean all
 	rm -rf boot
 ) 
 echo "---> copying includes.chroot"

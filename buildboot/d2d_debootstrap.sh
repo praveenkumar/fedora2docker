@@ -3,4 +3,5 @@ set -e
 
 #debootstrap
 echo "---> debootstrapping"
-debootstrap --include="$PACKAGES" --variant=minbase $SUITE $BUILDDIR $MIRROR
+supermin --prepare "$PACKAGES" -o /tmp/supermin.d
+supermin --build -f chroot /tmp/supermin.d -o $BUILDDIR
