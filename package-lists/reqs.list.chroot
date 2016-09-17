@@ -6,11 +6,11 @@ ca-certificates
 dbus
 dhcp-client
 dhcp-common
-ifupdown
+initscripts
 iproute
 iptables
 iputils
-kernel
+kernel-core
 openssh-server
 sudo
 systemd

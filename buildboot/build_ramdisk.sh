@@ -9,7 +9,7 @@ cd $BUILDDIR
 mkdir -p RD/bin
 mkdir -p RD/dev
 cd RD/bin
-cp /bin/busybox .
+cp /sbin/busybox .
 "$PWD/busybox" --install .
 cd ..
 cp -a /dev/{null,tty,zero} dev
