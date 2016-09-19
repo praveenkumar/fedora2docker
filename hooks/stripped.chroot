@@ -10,6 +10,9 @@
 
 set -e
 
+# Fix BZ1293703
+export PYTHONHASHSEED=0
+
 # WARNING: Using this hook will result in a stripped system, means,
 # it may very well be possible that other packages are depending
 # on certain files that get removed here.
@@ -20,7 +23,7 @@ set -e
 # be prepared to find and fix it for your own images.
 
 # Removing unused packages
-for PACKAGE in man-db manpages info wget dselect
+for PACKAGE in man-db info wget dselect
 do
 	if ! dnf remove -y "${PACKAGE}"
 	then

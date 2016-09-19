@@ -37,7 +37,6 @@ rm -rf /lib/modules/*/kernel/net/sunrpc/*
 rm -rf /lib/modules/*/kernel/net/bluetooth/*
 rm -rf /lib/modules/*/kernel/net/irda/*
 
-for i in `ls /lib/modules/`;
-do
-depmod $i
+for i in `ls /lib/modules/`; do
+    depmod $i
 done

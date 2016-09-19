@@ -1,5 +1,5 @@
 FROM fedora:24
-RUN dnf -y update && dnf -y install busybox shadow-utils bzip2 xz nano insserv kmod sudo supermin cpio syslinux xorriso
+RUN dnf -y update && dnf -y install busybox shadow-utils bzip2 xz nano kmod sudo supermin cpio syslinux xorriso
 ADD hooks /root/hooks
 ADD buildboot /root/buildboot/
 ADD includes.binary /root/includes.binary/

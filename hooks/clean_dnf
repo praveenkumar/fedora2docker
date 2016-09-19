@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+# Fix BZ1293703
+export PYTHONHASHSEED=0
+dnf clean all

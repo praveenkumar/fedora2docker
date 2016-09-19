@@ -17,3 +17,5 @@ systemd
 traceroute
 wget
 xz
+dnf
+docker

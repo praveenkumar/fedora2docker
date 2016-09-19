@@ -1,4 +1,10 @@
-dnf -y remove openssl debian-archive-keyring busybox live-tools apt file debconf-i18n klibc-utils libklibc initramfs-tools cpio gcc-4.8-base:amd64 gcc-4.9-base:amd64 libtext-wrapi18n-perl libtext-charwidth-perl liblocale-gettext-perl libuuid-perl libtext-iconv-perl
+#!/bin/sh
+set -e
+
+# Fix BZ1293703
+export PYTHONHASHSEED=0
+
+dnf -y remove openssl busybox live-tools file debconf-i18n klibc-utils libklibc initramfs-tools cpio gcc-4.8-base:amd64 gcc-4.9-base:amd64 libtext-wrapi18n-perl libtext-charwidth-perl liblocale-gettext-perl libuuid-perl libtext-iconv-perl || true
 rm -rf /usr/share/file 
 rm -rf /usr/share/zoneinfo 
 rm -rf /var/lib/dpkg 
