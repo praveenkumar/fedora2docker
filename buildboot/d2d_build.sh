@@ -13,7 +13,6 @@ echo "---> clean up the root directory"
 echo "---> copying includes.chroot"
 cp -Rfp $INCLUDESCHROOTDIR/bin/* $BUILDDIR/bin/
 cp -Rfp $INCLUDESCHROOTDIR/etc/network $BUILDDIR/etc/
-cp -Rfp $INCLUDESCHROOTDIR/lib/* $BUILDDIR/lib/
 
 echo "---> running hooks"
 (
